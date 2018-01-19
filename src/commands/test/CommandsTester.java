@@ -21,24 +21,22 @@ public abstract class CommandsTester {
             e.printStackTrace();
         }
 
-        System.out.println(stack.toString());
-
         PushCommand pushCommand = new PushCommand();
+        SubtractCommand subtractCommand = new SubtractCommand();
+        SwapCommand swapCommand = new SwapCommand();
+
+        pushCommand.pushItem(INT, 4);
         pushCommand.pushItem(STRING, "Hello world!");
-
         System.out.println(stack.toString());
 
-        ReverseCommand reverseCommand = new ReverseCommand();
-        reverseCommand.reverseString();
-
+        subtractCommand.subtractItems();
         System.out.println(stack.toString());
 
-        pushCommand.pushItem(DOUBLE, 64.3);
+        pushCommand.pushItem(DOUBLE, 3.2);
+        swapCommand.swap();
+        subtractCommand.subtractItems();
         System.out.println(stack.toString());
 
-        reverseCommand.reverseString();
-        System.out.println(stack.toString());
-        System.out.println(reverseCommand.getErrorMessage());
 
     }
 }

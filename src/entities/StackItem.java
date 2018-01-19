@@ -103,4 +103,12 @@ public class StackItem {
         return toReturn;
     }
 
+    /**
+     * Returns the item type associated with this item
+     * @return the item type
+     */
+    public ItemType getItemtype() {
+        return this.itemtype;
+    }
+
 }
